@@ -44,5 +44,6 @@ sample:
   clinical: clinic
   wastewater: waste
 ```
-
+The ontology represented by `./dummydata/dummy2.yaml` can be visualized this way:
 ![example_ontology](dummydata/uml.png)
+I.e. we have a tree where the leaves contain a regular expression and each path from root to leaf represent a possible sample ontology.
