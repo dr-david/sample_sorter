@@ -31,11 +31,13 @@ optional arguments:
 
 We will use dummy data in the directory `./dummydata` to illustrate usage. We have a dummy sample list in `./dummydata/dummy.tsv`, that we want to sort according to the ontology in `./dummydata/dummy2.yaml`:
 ```console
-dr-david@cbg:~$ cat ./dummydata/dummy.yaml
-control: ^ctr
-sample:
-  clinical: ^clinic
-  wastewater: ^waste
+dr-david@cbg:~$ cat ./dummydata/dummy.tsv
+ctrl1	batch1
+ctrl2	batch1
+waste1	batch1
+waste2	batch1
+clinic1	batch1
+clinic2	batch1
 dr-david@cbg:~$ cat ./dummydata/dummy2.yaml
 control: ctr
 sample:
