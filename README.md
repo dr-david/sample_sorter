@@ -30,9 +30,13 @@ optional arguments:
 ## Examples
 
 We will use dummy data in the directory `./dummydata` to illustrate usage. We have a dummy sample list in `./dummydata/dummy.tsv`, that we want to sort according to the ontology in `./dummydata/dummy2.yaml`:
-
-```
-cat ./dummydata/dummy.yaml
+```console
+dr-david@cbg:~$ cat ./dummydata/dummy.yaml
+control: ^ctr
+sample:
+  clinical: ^clinic
+  wastewater: ^waste
+dr-david@cbg:~$ cat ./dummydata/dummy.yaml
 control: ^ctr
 sample:
   clinical: ^clinic
