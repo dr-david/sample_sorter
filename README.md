@@ -109,3 +109,16 @@ feed-me-dna@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy_bad.tsv -y ./d
 ERROR: Found 1 conflicts between sample ontologies, first conflict on sample number 8:
 clinictr : [('control',), ('sample', 'clinical')]
 ```
+Samples that have no ontologies will not throw errors, and will output a blank line or a line with only zero values on the tsv. If one wishes to still produce results when there are conflicts (i.e. samples with multiple ontologies), error can be overriden with `-f` or `--force`:
+
+```console
+feed-me-dna@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy_bad.tsv -y ./dummydata/dummy2.yaml -d -f
+('control',)
+('control',)
+('sample', 'wastewater')
+('sample', 'wastewater')
+('sample', 'clinical')
+('sample', 'clinical')
+
+('control',)('sample', 'clinical')
+```
