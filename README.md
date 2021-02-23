@@ -36,9 +36,9 @@ control: ^ctr
 sample:
   clinical: ^clinic
   wastewater: ^waste
-dr-david@cbg:~$ cat ./dummydata/dummy.yaml
-control: ^ctr
+dr-david@cbg:~$ cat ./dummydata/dummy2.yaml
+control: ctr
 sample:
-  clinical: ^clinic
-  wastewater: ^waste
+  clinical: clinic
+  wastewater: waste
 ```
