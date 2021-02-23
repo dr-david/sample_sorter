@@ -45,4 +45,4 @@ sample:
   wastewater: waste
 ```
 
-![example_ontology](dummydata/ontology.bmp)
+![example_ontology](dummydata/uml.png)
