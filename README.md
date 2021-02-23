@@ -44,3 +44,5 @@ sample:
   clinical: clinic
   wastewater: waste
 ```
+
+![example_ontology](dummydata/ontology.bmp)
