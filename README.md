@@ -38,6 +38,7 @@ waste1	batch1
 waste2	batch1
 clinic1	batch1
 clinic2	batch1
+
 dr-david@cbg:~$ cat ./dummydata/dummy2.yaml
 control: ctr
 sample:
@@ -47,3 +48,28 @@ sample:
 The ontology represented by `./dummydata/dummy2.yaml` can be visualized this way:
 ![example_ontology](dummydata/uml.png)
 I.e. we have a tree where the leaves contain a regular expression and each path from root to leaf represent a possible sample ontology.
+
+To sort the data according to the ontology and dump the list of samples ontologies to the terminal, we do:
+```console
+dr-david@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy.tsv -y ./dummydata/dummy2.yaml -d
+('control',)
+('control',)
+('sample', 'wastewater')
+('sample', 'wastewater')
+('sample', 'clinical')
+('sample', 'clinical')
+```
+
+We can also specify that we dont want this result printed to the teminal but outputted in a text file:
+
+```console
+dr-david@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy.tsv -y ./dummydata/dummy2.yaml -l ontologies_list.txt
+
+dr-david@cbg:~$ cat ontologies_list.txt
+('control',)
+('control',)
+('sample', 'wastewater')
+('sample', 'wastewater')
+('sample', 'clinical')
+('sample', 'clinical')
+```
