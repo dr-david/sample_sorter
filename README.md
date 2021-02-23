@@ -102,3 +102,10 @@ clinic2	batch1
 whatami???	batch1
 clinictr	batch1
 ```
+Running the code will by default throw an error and stop when a conflict is found (and also print what was the first conflict in the error message, for easier debugging of the regexpes):
+
+```console
+python ./sample_sorter.py -s ./dummydata/dummy_bad.tsv -y ./dummydata/dummy2.yaml -d
+ERROR: Found 1 conflicts between sample ontologies, first conflict on sample number 8:
+clinictr : [('control',), ('sample', 'clinical')]
+```
