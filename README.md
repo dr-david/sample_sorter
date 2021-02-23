@@ -29,9 +29,11 @@ optional arguments:
 
 ## Examples
 
+### 
+
 We will use dummy data in the directory `./dummydata` to illustrate usage. We have a dummy sample list in `./dummydata/dummy.tsv`, that we want to sort according to the ontology in `./dummydata/dummy2.yaml`:
 ```console
-dr-david@cbg:~$ cat ./dummydata/dummy.tsv
+feed-me-dna@cbg:~$ cat ./dummydata/dummy.tsv
 ctrl1	batch1
 ctrl2	batch1
 waste1	batch1
@@ -39,7 +41,7 @@ waste2	batch1
 clinic1	batch1
 clinic2	batch1
 
-dr-david@cbg:~$ cat ./dummydata/dummy2.yaml
+feed-me-dna@cbg:~$ cat ./dummydata/dummy2.yaml
 control: ctr
 sample:
   clinical: clinic
@@ -51,7 +53,7 @@ I.e. we have a tree where the leaves contain a regular expression and each path 
 
 To sort the data according to the ontology and dump the list of samples ontologies to the terminal, we do:
 ```console
-dr-david@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy.tsv -y ./dummydata/dummy2.yaml -d
+feed-me-dna@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy.tsv -y ./dummydata/dummy2.yaml -d
 ('control',)
 ('control',)
 ('sample', 'wastewater')
@@ -63,9 +65,9 @@ dr-david@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy.tsv -y ./dummydat
 We can also specify that we dont want this result printed to the teminal but outputted in a text file:
 
 ```console
-dr-david@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy.tsv -y ./dummydata/dummy2.yaml -l ontologies_list.txt
+feed-me-dna@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy.tsv -y ./dummydata/dummy2.yaml -l ontologies_list.txt
 
-dr-david@cbg:~$ cat ontologies_list.txt
+feed-me-dna@cbg:~$ cat ontologies_list.txt
 ('control',)
 ('control',)
 ('sample', 'wastewater')
@@ -76,9 +78,9 @@ dr-david@cbg:~$ cat ontologies_list.txt
 Or we can also write the output as a table in a .tsv, where each column is a partial ontology:
 
 ```console
-dr-david@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy.tsv -y ./dummydata/dummy2.yaml -t ontologies_table.tsv
+feed-me-dna@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy.tsv -y ./dummydata/dummy2.yaml -t ontologies_table.tsv
 
-dr-david@cbg:~$ cat ontologies_table.tsv
+feed-me-dna@cbg:~$ cat ontologies_table.tsv
 control	sample	wastewater	clinical
 1	0	0	0
 1	0	0	0
