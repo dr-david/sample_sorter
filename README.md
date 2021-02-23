@@ -8,7 +8,7 @@ Program to sort sample names according to an ontology, with regexpes. Default us
 Use option `-h` / `--help` to see available command-line options:
 
 ```console
-dr-david@cbg:~$ python ./sample_sorter.py -h
+feed-me-dna@cbg:~$ python ./sample_sorter.py -h
 usage: sample_sorter.py [-h] -s TSV) (-y YML [-l TXT] [-t TSV] [-d] [-f] [-v]
 
 Sort sample names into ontologies.
