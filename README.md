@@ -1,9 +1,9 @@
 # sample_sorter
 
-Program to sort sample names according to an ontology, with regexpes. Default usage takes a as inputs: a .tsv list of sample names, a .yaml.
+Program to sort sample names according to an ontology, with regexpes. Default usage takes a as inputs: a .tsv list of sample names, a .yaml describing the ontology and associated regular expressions.
 
 
-# Usage
+## Usage
 
 Use option `-h` / `--help` to see available command-line options:
 
@@ -27,4 +27,14 @@ optional arguments:
   -v, --verbose         Write what's happening in the terminal.
 ```
 
-# Example
+## Examples
+
+We will use dummy data in the directory `./dummydata` to illustrate usage. We have a dummy sample list in `./dummydata/dummy.tsv`, that we want to sort according to the ontology in `./dummydata/dummy2.yaml`:
+
+```
+cat ./dummydata/dummy.yaml
+control: ^ctr
+sample:
+  clinical: ^clinic
+  wastewater: ^waste
+```
