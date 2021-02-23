@@ -73,3 +73,17 @@ dr-david@cbg:~$ cat ontologies_list.txt
 ('sample', 'clinical')
 ('sample', 'clinical')
 ```
+Or we can also write the output as a table in a .tsv, where each column is a partial ontology:
+
+```console
+dr-david@cbg:~$ python ./sample_sorter.py -s ./dummydata/dummy.tsv -y ./dummydata/dummy2.yaml -t ontologies_table.tsv
+
+dr-david@cbg:~$ cat ontologies_table.tsv
+control	sample	wastewater	clinical
+1	0	0	0
+1	0	0	0
+0	1	1	0
+0	1	1	0
+0	1	0	1
+0	1	0	1
+```
