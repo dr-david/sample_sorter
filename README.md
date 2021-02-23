@@ -29,8 +29,6 @@ optional arguments:
 
 ## Examples
 
-### 
-
 We will use dummy data in the directory `./dummydata` to illustrate usage. We have a dummy sample list in `./dummydata/dummy.tsv`, that we want to sort according to the ontology in `./dummydata/dummy2.yaml`:
 ```console
 feed-me-dna@cbg:~$ cat ./dummydata/dummy.tsv
@@ -88,4 +86,19 @@ control	sample	wastewater	clinical
 0	1	1	0
 0	1	0	1
 0	1	0	1
+```
+### Handling conflicts
+
+In most use cases we would like ontologies to cover all samples without conflicts, i.e. each sample should have one and only one ontology. Let's see a case where we have a sample that has no ontology and a sample that has two conflicting ontologies:
+
+```console
+feed-me-dna@cbg:~$ cat ./dummydata/dummy_bad.tsv
+ctrl1	batch1
+ctrl2	batch1
+waste1	batch1
+waste2	batch1
+clinic1	batch1
+clinic2	batch1
+whatami???	batch1
+clinictr	batch1
 ```
